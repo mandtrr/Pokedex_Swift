@@ -165,25 +165,28 @@ struct ContentView: View {
 
     private func backgroundColor(forType type: String) -> Color {
         switch type {
-        case "fire":
-            return Color.red
-        case "water":
-            return Color.blue
-        case "grass":
-            return Color.green
-        case "electric":
-            return Color.yellow
-        case "psychic":
-            return Color.purple
-        case "ghost":
-            return Color.gray
-        case "bug":
-            return Color.teal
-        case "normal":
-            return Color.orange
-        default:
-            return Color(.systemGray6) // Cor padrão
-        }
-    }
+           case "fire":
+               return Color.red // Vermelho para Fire
+           case "water":
+               return Color.blue // Azul para Water
+           case "grass":
+               return Color.green // Verde para Grass
+           case "electric":
+               return Color.yellow // Amarelo para Electric
+           case "psychic":
+               return Color.purple.opacity(0.8) // Roxo intenso para Psychic
+           case "bug":
+               return Color.green.opacity(0.7) // Verde claro/amarelado para Bug
+           case "normal":
+               return Color(red: 0.96, green: 0.87, blue: 0.7) // Beige para Normal (RGB)
+           case "ghost":
+               return Color.purple.opacity(0.6) // Roxo escuro para Ghost
+           case "rock":
+               return Color.brown.opacity(0.7) // Marrom para Rock
+           case "steel":
+               return Color.gray.opacity(0.9) // Cinza metálico para Steel
+           default:
+               return Color.gray.opacity(0.4) // Cinza mais neutro para outros
+           }
+       }
 }
-
